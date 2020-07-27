@@ -5,19 +5,21 @@ import academy.learnprogramming.Game;
 import academy.learnprogramming.MessageGenerator;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.ApplicationListener;
 import org.springframework.context.event.ContextRefreshedEvent;
 import org.springframework.context.event.EventListener;
 import org.springframework.stereotype.Component;
+import lombok.extern.slf4j.Slf4j;
+
 
 import java.util.Scanner;
 
 @Component
+@Slf4j
 public class ConsoleNumberGuess{
 
     // == constants ==
-    private final static Logger log = LoggerFactory.getLogger(ConsoleNumberGuess.class);
+    //No longer declared due to Lombok annotation Slf4j
+    //private final static Logger log = LoggerFactory.getLogger(ConsoleNumberGuess.class);
 
     // == fields ==
     private final Game game;
