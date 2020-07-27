@@ -14,8 +14,13 @@ public class MessageGeneratorImpl implements MessageGenerator{
     private final static Logger log = LoggerFactory.getLogger(MessageGeneratorImpl.class);
 
     // == fields ==
-    @Autowired
-    private Game game;
+
+    private final Game game;
+
+
+    public MessageGeneratorImpl(Game game) {
+        this.game = game;
+    }
 
     // == init methods ==
     @PostConstruct
